@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/webui/flaticon/Flaticon.woff"],"names":["module","exports"],"mappings":"qGAAAA,EAAOC,QAAU,IAA0B","file":"js/chunk-2d0e6530.be554bb9.js","sourcesContent":["module.exports = __webpack_public_path__ + \"fonts/Flaticon.a7a822d8.woff\";"],"sourceRoot":""}

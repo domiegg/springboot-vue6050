@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="com.daowen.mapper.CouponMapper">
+
+
+
+
+    <select id="getEntityPlus" resultType="coupon" parameterType="map">
+        select * from coupon c
+         where 1=1
+
+        <if test="totalfee!=null">
+            and  c.minreq&lt;=#{totalfee}
+        </if>
+
+        <if test="name!=null">
+            and c.name like '%${name}%'
+        </if>
+
+    </select>
+
+
+    <select id="loadPlus" resultType="coupon" parameterType="map">
+
+        select * from coupon c
+        where 1=1
+
+        <if test="id!=null">
+           and  c.id=#{id}
+        </if>
+
+
+    </select>
+
+
+</mapper>

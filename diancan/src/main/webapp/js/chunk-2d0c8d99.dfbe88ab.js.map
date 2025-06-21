@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/admin/images/alipay.jpg"],"names":["module","exports"],"mappings":"mGAAAA,EAAOC,QAAU,IAA0B","file":"js/chunk-2d0c8d99.dfbe88ab.js","sourcesContent":["module.exports = __webpack_public_path__ + \"img/alipay.b9fe9636.jpg\";"],"sourceRoot":""}

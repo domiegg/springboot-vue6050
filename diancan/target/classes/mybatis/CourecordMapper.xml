@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd" >
+<mapper namespace="com.daowen.mapper.CourecordMapper">
+
+
+      <select id="getEntityPlus"  parameterType="map"  resultType="com.daowen.vo.CouponVo">
+          select DISTINCT c.*,cr.state,cr.id as crid,h.id as hyid,
+          h.accountname as hyaccount,
+          h.name as hyname
+          from  coupon c , courecord  cr,
+          huiyuan h  where h.id=cr.hyid
+          and cr.couponid=c.id
+          <if test="hyid!=null">
+              and  h.id=#{hyid}
+          </if>
+          <if test="state!=null">
+              and cr.state=#{state}
+          </if>
+          <if test="spids!=null">
+              and sp.id in
+              <foreach item="spid" index="index" open="(" close=")" separator="," collection="spids">
+                  #{spid}
+              </foreach>
+
+          </if>
+          <if test="totalfee!=null">
+              and  c.minreq&lt;=#{totalfee}
+          </if>
+          <if test="name!=null">
+              and c.name like '%${name}%'
+          </if>
+      </select>
+      
+       <select id="loadPlus" parameterType="map"   resultType="com.daowen.vo.CouponVo">
+           select DISTINCT c.*,cr.state,cr.id as crid,h.id as hyid,
+           h.accountname as hyaccount,
+           h.name as hyname
+           from  coupon c , courecord  cr,
+           huiyuan h  where h.id=cr.hyid
+           and cr.couponid=c.id
+           <if test="id!=null">
+               and  cr.id=#{id}
+           </if>
+           <if test="hyid!=null">
+               and h.id=#{hyid}
+           </if>
+      </select>
+      
+
+
+</mapper>
+
+

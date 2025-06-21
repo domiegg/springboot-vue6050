@@ -1,0 +1,1 @@
+{"version":3,"sources":["webpack:///./src/webui/smartbox/images/footer.png"],"names":["module","exports"],"mappings":"qGAAAA,EAAOC,QAAU,IAA0B","file":"js/chunk-2d0b2986.30c579af.js","sourcesContent":["module.exports = __webpack_public_path__ + \"img/footer.ce7b00cc.png\";"],"sourceRoot":""}

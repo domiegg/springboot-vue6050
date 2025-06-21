@@ -1,0 +1,2 @@
+(window["webpackJsonp"]=window["webpackJsonp"]||[]).push([["chunk-2d0e6530"],{"97ea":function(n,o,p){n.exports=p.p+"fonts/Flaticon.a7a822d8.woff"}}]);
+//# sourceMappingURL=chunk-2d0e6530.be554bb9.js.map
